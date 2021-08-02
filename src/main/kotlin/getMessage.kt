@@ -22,7 +22,7 @@ fun getMessage(server : String, key: String, ts: String, access_token: String){
             }
             val txt = strBuilder.toString()
             val from_id = message.getInt("from_id")
-            val url = URL("https://api.vk.com/method/messages.send?user_id=$from_id&message="+"Вы+написали:+"+"$txt&random_id=$random&" +
+            val url = URL("https://api.vk.com/method/messages.send?user_id=$from_id&message="+"Вы+сказали:+"+"$txt&random_id=$random&" +
                     "access_token=$access_token&v=5.131").readText()
         }
     }
